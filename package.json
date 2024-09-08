@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "modern-normalize": "^3.0.0",
+    "sass-fonts": "^3.0.6"
+  }
+}

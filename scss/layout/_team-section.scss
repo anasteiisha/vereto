@@ -1,0 +1,139 @@
+.section {
+  &__block {
+    display: flex;
+    gap: 17%;
+    padding: 0px;
+    width: auto;
+  }
+
+  &__icon {
+    font-weight: 500;
+    font-size: 1.6vw;
+
+    padding: 9px 16px;
+    margin: 0;
+
+    color: #fffdfc;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--color-white);
+  }
+
+  &__content {
+    position: relative;
+    font-size: 3.1vw;
+    text-align: justify;
+
+    margin-bottom: 64px;
+    margin-top: 0px;
+
+    &-first-stroke {
+      display: flex;
+      align-items: flex-start;
+    }
+    &-highlight {
+      color: var(--color-brand-ligth);
+      font-weight: bold;
+      font-size: 3.5vw;
+    }
+  }
+
+  &__profiles {
+    display: flex;
+    justify-content: space-between;
+
+    &-profile {
+      flex: 1;
+      margin-bottom: 17px;
+      text-align: start;
+      transition: opacity 0.3s ease;
+      border-bottom: 1.5px solid #fffdfc;
+
+      &:not(:first-child) {
+        margin-left: 48px;
+      }
+
+      img {
+        width: 100%;
+        max-height: 408.43px;
+
+        margin-bottom: 32px;
+      }
+
+      // &:hover {
+      //   opacity: 1;
+      // }
+
+      // &--inactive {
+      //   opacity: 0.4;
+      // }
+    }
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--primary-color);
+}
+
+.team-section {
+  background-color: var(--primary-color);
+  color: var(--color-gray);
+  padding-top: 64px;
+  &__divider {
+    width: 16px;
+  }
+  &__animation-text {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.3vw;
+    text-transform: uppercase;
+  }
+}
+
+/* Профили с меньшей прозрачностью по умолчанию */
+// .section__profiles-profile {
+//   opacity: 0.5;
+//   transition: opacity 0.3s ease;
+// }
+
+// /* Подсветка при наведении */
+// .section__profiles-profile:hover {
+//   opacity: 1;
+// }
+
+/* Активный профиль с полной прозрачностью */
+// .section__profiles-profile--active {
+//   opacity: 1;
+// }
+
+.profile__name {
+  color: red;
+  font-size: 66px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.profile__description {
+  margin: 0;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+// .profile__img {
+//   &:hover {
+//     opacity: 1;
+//   }
+// }
+// .profile__img--inactive {
+//   opacity: 0.4;
+// }
+
+//
