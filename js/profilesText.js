@@ -101,4 +101,5 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("andrii").addEventListener("click", function () {
     updateText("andrii");
   });
+  ё;
 });
