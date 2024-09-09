@@ -101,28 +101,29 @@ body {
 }
 
 /* Профили с меньшей прозрачностью по умолчанию */
-// .section__profiles-profile {
-//   opacity: 0.5;
-//   transition: opacity 0.3s ease;
-// }
+.section__profiles-profile {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
 
-// /* Подсветка при наведении */
-// .section__profiles-profile:hover {
-//   opacity: 1;
-// }
+/* Подсветка при наведении */
+.section__profiles-profile:hover {
+  opacity: 1;
+}
 
 /* Активный профиль с полной прозрачностью */
-// .section__profiles-profile--active {
-//   opacity: 1;
-// }
+.section__profiles-profile--active {
+  opacity: 1;
+}
 
 .profile__name {
-  color: red;
-  font-size: 66px;
+  color: var(--color-white-second);
+  font-size: 32px;
   font-weight: 500;
   margin-bottom: 12px;
 }
 .profile__description {
+  color: var(--color-gray);
   margin: 0;
   font-size: 22px;
   margin-bottom: 12px;
