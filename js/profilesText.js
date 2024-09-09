@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Тексты для каждого профиля
   const profilesText = {
     yana: `
         <div class="section__block" id="mainText">
@@ -68,17 +67,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const sectionContent = document.querySelector(".section__content");
     const profiles = document.querySelectorAll(".section__profiles-profile");
 
-    // Обновляем текст в контентной секции
+    // оновлення тексту-опису профайла, на який клікнули
     sectionContent.innerHTML = profilesText[profile];
 
-    // Убираем класс active со всех профилей
+    // видаляється  active клас зі всіх профайлів
     profiles.forEach((profileElement) =>
       profileElement.classList.remove("section__profiles-profile--active")
     );
 
-    // Добавляем active класс к выбранному профилю
+    // додається active клас к профайлу
     const selectedProfile = document.getElementById(profile + "-profile");
     selectedProfile.classList.add("section__profiles-profile--active");
+
+    // для прокрутки на початок секціі при кліку
+    const teamSection = document.querySelector(".team-section");
+    teamSection.scrollIntoView({ behavior: "smooth" });
+
+    // Запускаем анимацию печати текста
+    if (typeof window.typeTextFirst === "function") {
+      window.typeTextFirst(); // Запускаем функцию печати текста
+    }
   }
 
   // Назначаем обработчики кликов для каждого профиля

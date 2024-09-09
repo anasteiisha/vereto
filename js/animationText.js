@@ -1,22 +1,21 @@
-// Функция для печати текста по символам
-function typeTextFirst() {
-  const firstText = "Чим ми кращі?"; // Здесь можно изменить текст, если нужно
+function typeText(elementId, text, speed = 100) {
+  const typingElement = document.getElementById(elementId);
 
-  const typingTextElementFirst = document.getElementById("typingTextFirst");
+  if (!typingElement) return; // Перевірка чи вже існує елемент
 
-  let indexFirst = 0;
-  typingTextElementFirst.textContent = ""; // Очищаем текст перед началом печати
+  let index = 0;
+  typingElement.textContent = ""; // Очищається перед друком
 
   function typeNextChar() {
-    if (indexFirst < firstText.length) {
-      typingTextElementFirst.textContent += firstText.charAt(indexFirst);
-      indexFirst++;
-      setTimeout(typeNextChar, 100);
+    if (index < text.length) {
+      typingElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeNextChar, speed);
     }
   }
 
   typeNextChar();
 }
-typeTextFirst();
-// Экспортируем функцию, если используем модульную систему (например, ES6 Modules)
-// export { typeTextFirst };
+
+typeText("typingTextFirst", "Чим ми кращі?", 100);
+typeText("typingTextSecond", "в цифровому просторі", 100);
