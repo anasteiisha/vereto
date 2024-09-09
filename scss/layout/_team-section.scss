@@ -51,7 +51,17 @@
       margin-bottom: 17px;
       text-align: start;
       transition: opacity 0.3s ease;
+
       border-bottom: 1.5px solid #fffdfc;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+      &--active {
+        opacity: 1;
+      }
 
       &:not(:first-child) {
         margin-left: 48px;
@@ -63,14 +73,6 @@
 
         margin-bottom: 32px;
       }
-
-      // &:hover {
-      //   opacity: 1;
-      // }
-
-      // &--inactive {
-      //   opacity: 0.4;
-      // }
     }
   }
 }
@@ -100,22 +102,6 @@ body {
   }
 }
 
-/* Профили с меньшей прозрачностью по умолчанию */
-.section__profiles-profile {
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
-}
-
-/* Подсветка при наведении */
-.section__profiles-profile:hover {
-  opacity: 1;
-}
-
-/* Активный профиль с полной прозрачностью */
-.section__profiles-profile--active {
-  opacity: 1;
-}
-
 .profile__name {
   color: var(--color-white-second);
   font-size: 32px;
@@ -127,17 +113,4 @@ body {
   margin: 0;
   font-size: 22px;
   margin-bottom: 12px;
-}
-// .profile__img {
-//   &:hover {
-//     opacity: 1;
-//   }
-// }
-// .profile__img--inactive {
-//   opacity: 0.4;
-// }
-
-//
-.section__profiles-profile:hover .profile__name {
-  opacity: 1;
 }
