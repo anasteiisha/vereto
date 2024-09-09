@@ -79,6 +79,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Добавляем active класс к выбранному профилю
     const selectedProfile = document.getElementById(profile + "-profile");
     selectedProfile.classList.add("section__profiles-profile--active");
+
+    // Запускаем анимацию печати текста
+    if (typeof window.typeTextFirst === "function") {
+      window.typeTextFirst(); // Запускаем функцию печати текста
+    }
   }
 
   // Назначаем обработчики кликов для каждого профиля
